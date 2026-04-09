@@ -121,7 +121,11 @@ class GeoProcessor:
         tree = STRtree(pincode_shapes)
 
         for street_feature in transformed_streets:
-            s_shape = shape(street_feature['geometry'])
+            try:
+                s_shape = shape(street_feature['geometry'])
+            except Exception as e:
+                print("Skipping invalid street geometry:", e)
+                continue
             indices = tree.query(s_shape)
             for idx in indices:
                 if pincode_shapes[idx].intersects(s_shape):
