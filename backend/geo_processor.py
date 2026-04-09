@@ -64,7 +64,11 @@ class GeoProcessor:
             self.pincode_map[pincode]       = feature
             self.street_by_pincode[pincode] = []
 
-            p_shape = shape(feature['geometry'])
+            try:
+                p_shape = shape(feature['geometry'])
+            except Exception as e:
+                print("Skipping invalid geometry:", e)
+                continue
             pincode_shapes.append(p_shape)
             pincode_names.append(pincode)
 
