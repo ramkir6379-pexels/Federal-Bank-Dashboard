@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "bunglow",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "bungalow", "lat": 12.975185, "lng": 80.199018, "pincode": 600091, "category": "residential", "subcategor": "bungalow", "street_id": 1377590604, "street_nam": "Krishna Street", "distance_t": 4.6325330334456636, "street_typ": "named_public", "road_type": "residential", "assignment": "buffer_intersection" }, "geometry": { "type": "Point", "coordinates": [ 80.199018, 12.975185 ] } },
+{ "type": "Feature", "properties": { "name": "RGL Bungalows", "lat": 12.967509, "lng": 80.2059, "pincode": 600091, "category": "residential", "subcategor": "bungalow", "street_id": 27320107, "street_nam": "Sivaraman Street", "distance_t": 13.037440584396707, "street_typ": "named_public", "road_type": "residential", "assignment": "buffer_intersection" }, "geometry": { "type": "Point", "coordinates": [ 80.2059, 12.967509 ] } },
+{ "type": "Feature", "properties": { "name": "Justay Homes", "lat": 12.937589, "lng": 80.211784, "pincode": 600100, "category": "residential", "subcategor": "bungalow", "street_id": 1157633873, "street_nam": "Kamakoti Nagar Road", "distance_t": 288.36388428383879, "street_typ": "far_from_named", "road_type": "residential", "assignment": "pure_nearest" }, "geometry": { "type": "Point", "coordinates": [ 80.211784, 12.937589 ] } }
+]
+}

@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "villa_gated_community",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "India Bulls Greens Apartment, Perumbakkam", "lat": 12.911636, "lng": 80.202597, "pincode": 600100, "category": "residential", "subcategor": "gated community", "street_id": 194789852, "street_nam": "Pudhu Nagar MGR street", "distance_t": 261.82154500934234, "street_typ": "far_from_named", "road_type": "residential", "assignment": "pure_nearest" }, "geometry": { "type": "Point", "coordinates": [ 80.202597, 12.911636 ] } },
+{ "type": "Feature", "properties": { "name": "Chettinadd Green Vista", "lat": 12.937116, "lng": 80.199093, "pincode": 600100, "category": "residential", "subcategor": "gated community", "street_id": 183273731, "street_nam": "Chittibabu nagar - Ambal Nagar", "distance_t": 83.46341445879834, "street_typ": "named_public", "road_type": "residential", "assignment": "pure_nearest" }, "geometry": { "type": "Point", "coordinates": [ 80.199093, 12.937116 ] } }
+]
+}

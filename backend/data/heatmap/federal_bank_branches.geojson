@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "federal_bank_branches",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32644" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "name": "Federal Bank", "lat": 12.942381, "lng": 80.2074203, "pincode": 600100, "place_id": "ChIJzbYbC1VdUjoR_rKB83FHXuc", "street_id": 384312605, "street_nam": "1st Cross Street", "category": "Bank Branch" }, "geometry": { "type": "Point", "coordinates": [ 414029.309782978729345, 1430897.052351414924487 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "name": "Federal Bank", "lat": 12.9534644, "lng": 80.2419931, "pincode": 600096, "place_id": "ChIJtWd5wgRdUjoR0wTnJQY5U4A", "street_id": 95641750, "street_nam": "Rajiv Gandhi Salai", "category": "Bank Branch" }, "geometry": { "type": "Point", "coordinates": [ 417783.239117791643366, 1432111.449540520552546 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "name": "Federal Bank", "lat": 12.9652394, "lng": 80.2061565, "pincode": 600091, "place_id": "ChIJiXusVKddUjoRmUKWIPLEW1Y", "street_id": 30598635, "street_nam": "Bazaar Road", "category": "Bank Branch" }, "geometry": { "type": "Point", "coordinates": [ 413900.070362112484872, 1433425.51260119327344 ] } }
+]
+}

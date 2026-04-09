@@ -1,0 +1,44 @@
+# Walkthrough: Geo-Intelligence Banking Dashboard
+
+I have successfully established the full-stack repository structure within `d:\THAZHAL\Fedral bank` following the "Editorial Geo-Intelligence" design specification.
+
+## 🚀 Accomplishments
+
+### 1. Backend (Flask API)
+- **Framework & Routing**: Initiated a Flask application with `flask-cors` built to run on port `5000`.
+- **Data Mockups**: Created `data.py` containing robust dummy dictionaries for: `[atm, branch, commercial, residential, school, college]` centered around **Chennai** (e.g., T Nagar, Adyar, IIT Madras, etc.).
+- **Endpoints Exchanged**:
+  - `GET /locations?type={category}`: Retrieves lat/long coordinates & system status for Leaflet rendering.
+  - `GET /insights?area={category}`: Simulates intelligence logic producing insights like branch expansion opportunities, optimal ATM placements, or promotional sales opportunities.
+
+### 2. Frontend (Angular & Leaflet)
+- **Modern Angular Setup**: Initialized an Angular v18 Standalone Component application running on port `4200` disabling SSR to prevent any Leaflet rendering race conditions on the server.
+- **Fintech Design System**: Integrated Tailwind CSS configured with the specific custom tokens (Trust Blue, Growth Green, Opportunity Gold) and standard "Glass & Gradient" themes utilizing `surface-container-low`, custom font styling (Manrope & Inter), and ambient shadows.
+- **Reactive 3-Column Architecture**:
+  - `SidebarComponent`: Emits category change events natively on click, applying sleek UX focus states.
+  - `MapViewComponent`: Encapsulates the Leaflet Map Engine centered dynamically above **Chennai**. Employs CartoDB "Light All" tiles with custom-colored data points based on branch hierarchy dynamically synced via `ngOnChanges`.
+  - `InsightsPanelComponent`: Subscribes dynamically to the API data responding with responsive structural cards detailing reasons & recommendation CTA flows.
+  - `DashboardComponent`: Acts as the unified shell orchestrating inputs/outputs efficiently.
+
+## 🛠️ Instructions to Run
+
+To start up your dashboard, utilize two separate terminal tabs at the root folder: `D:\THAZHAL\Fedral bank\`.
+
+**Terminal 1: Start Backend (Flask)**
+```bash
+cd backend
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python app.py
+```
+*(Runs on [http://localhost:5000](http://localhost:5000))*
+
+**Terminal 2: Start Frontend (Angular)**
+```bash
+cd frontend
+npm start
+```
+*(Runs on [http://localhost:4200](http://localhost:4200))*
+
+Once both are active, open `http://localhost:4200` to interact with your dashboard!

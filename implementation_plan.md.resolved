@@ -1,0 +1,64 @@
+# Goal Description
+
+Build a "Geo-Intelligence Banking Dashboard" web application, structured as a clean full-stack project with an Angular frontend, Tailwind CSS styling, Leaflet mapping integration, and a Flask REST backend. The UI will strictly follow the "Editorial Geo-Intelligence" design specifications from Stitch project 12150203871520585058, leveraging floating layers, modern functional typography (Manrope & Inter), and an organic 3-column layout (Sidebar, Map View, Insights).
+
+## User Review Required
+
+> [!IMPORTANT]
+> The plan outlines full automation to set up the Angular application and the Flask application inside the `banking-geo-dashboard` folder. Please confirm if you have any preferred versions for Flask, Leaflet, or Angular components, otherwise I will use the latest available.
+
+## Proposed Changes
+
+### Top-Level Structure
+- `banking-geo-dashboard/`
+  - `frontend/` (Angular CLI project)
+  - `backend/` (Flask application)
+
+### Backend (Flask)
+
+#### [NEW] [app.py](file:///d:/THAZHAL/Fedral%20bank/banking-geo-dashboard/backend/app.py)
+Entry point setting up Flask and exposing `/locations` and `/insights` REST APIs using `flask_cors`.
+
+#### [NEW] [data.py](file:///d:/THAZHAL/Fedral%20bank/banking-geo-dashboard/backend/data.py)
+Static JSON/dictionary file containing dummy location data (e.g., ATMs, Branches, Schools, Commercial, Residential) and associated insights.
+
+#### [NEW] [requirements.txt](file:///d:/THAZHAL/Fedral%20bank/banking-geo-dashboard/backend/requirements.txt)
+Python dependencies (`flask`, `flask-cors`).
+
+### Frontend (Angular)
+- Run `npx -y @angular/cli new frontend --routing --style css --skip-git`.
+- Install `tailwindcss`, `postcss`, `autoprefixer` and initialize tailwind.
+- Install `leaflet` and `@types/leaflet`.
+- Configure `tailwind.config.js` with the Stitch project design tokens (colors, typography).
+- Create components: `sidebar`, `map-view`, `insights-panel`, and a `dashboard` wrapper container.
+- Create an `api.service` to fetch data from `http://localhost:5000`.
+
+#### [MODIFY] [tailwind.config.js](file:///d:/THAZHAL/Fedral%20bank/banking-geo-dashboard/frontend/tailwind.config.js)
+Define the core color system from the design: `primary`, `background`, `surface`, etc. Add fonts (`Manrope`, `Inter`).
+
+#### [NEW] [dashboard.component.ts](file:///d:/THAZHAL/Fedral%20bank/banking-geo-dashboard/frontend/src/app/components/dashboard/dashboard.component.ts)
+Wrapper component to hold the three-column layout.
+
+#### [NEW] [sidebar.component.ts](file:///d:/THAZHAL/Fedral%20bank/banking-geo-dashboard/frontend/src/app/components/sidebar/sidebar.component.ts)
+Left panel showing categories. Emits events when a category (ATM, Branch, etc.) is clicked.
+
+#### [NEW] [map-view.component.ts](file:///d:/THAZHAL/Fedral%20bank/banking-geo-dashboard/frontend/src/app/components/map-view/map-view.component.ts)
+Center panel housing the Leaflet map. Receives the selected category and updates markers.
+
+#### [NEW] [insights-panel.component.ts](file:///d:/THAZHAL/Fedral%20bank/banking-geo-dashboard/frontend/src/app/components/insights-panel/insights-panel.component.ts)
+Right panel displaying dynamically fetched insights from the Flask API based on the selected category.
+
+## Open Questions
+
+> [!NOTE]
+> 1. Are there specific map coordinates (e.g., a specific city or country) you would like the Leaflet map centered on by default? (I will use a generic central location otherwise).
+> 2. Do you prefer using `npm` over `yarn` or `pnpm` for the frontend? I will default to `npm`.
+
+## Verification Plan
+
+### Manual Verification
+- Start the Flask server on port 5000 (`python app.py`).
+- Start the Angular server on port 4200 (`npm start`).
+- Verify the 3-column UI aligns with the "Editorial Geo-Intelligence" design theme perfectly.
+- Ensure clicking on sidebar items correctly updates the map markers and the right-side insights.
+- Check API payload and rendering.

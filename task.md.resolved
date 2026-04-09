@@ -1,0 +1,12 @@
+# Implementation Tasks
+
+- `[x]` Setup Backend (Flask)
+  - `[x]` Create `backend/app.py`
+  - `[x]` Create `backend/data.py`
+  - `[x]` Create `backend/requirements.txt`
+  - `[x]` Initialize Angular inside `frontend` folder
+  - `[x]` Install Tailwind, Leaflet, and related dependencies
+  - `[x]` Configure `tailwind.config.js` with Stitch design tokens
+  - `[x]` Create Angular Components: Sidebar, MapView, InsightsPanel, Dashboard
+  - `[x]` Wire up `api.service` to Flask
+- `[x]` Final Verification
